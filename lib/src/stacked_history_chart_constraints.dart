@@ -6,7 +6,12 @@ class StackedHistoryChartConstraints {
   final Color color;
   final String dis; // description of the constraint
 
-  StackedHistoryChartConstraints copyWith({num minVal, num maxVal, Color color, String dis}) {
+  StackedHistoryChartConstraints copyWith({
+    num? minVal,
+    num? maxVal,
+    Color? color,
+    String? dis
+  }) {
     return StackedHistoryChartConstraints(
         minVal: minVal ?? this.minVal,
         maxVal: maxVal ?? this.maxVal,
@@ -15,7 +20,12 @@ class StackedHistoryChartConstraints {
     );
   }
 
-  const StackedHistoryChartConstraints({num minVal, num maxVal, this.color, this.dis})
+  const StackedHistoryChartConstraints({
+    required this.color,
+    required this.dis,
+    num? minVal,
+    num? maxVal,
+  })
       : assert(minVal != null || maxVal != null),
         assert((minVal != null && maxVal != null)
             ? minVal <= maxVal

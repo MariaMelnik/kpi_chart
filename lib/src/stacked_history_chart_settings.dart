@@ -5,9 +5,9 @@ import 'stacked_history_chart_constraints.dart';
 class StackedHistoryChartSettings {
   final List<StackedHistoryChartConstraints> constraints;
 
-  StackedHistoryChartSettings({List<StackedHistoryChartConstraints> constraints})
+  StackedHistoryChartSettings({List<StackedHistoryChartConstraints>? constraints})
       : assert(constraints != null),
-        this.constraints = solveIntersections(constraints) ?? List<StackedHistoryChartConstraints>();
+        this.constraints = solveIntersections(constraints) ?? <StackedHistoryChartConstraints>[];
   // should not be intersections in constraints. In this case not obvious what constrain we should use
 //        assert(constraints.any((KpiChartConstraints con1) => constraints.any((KpiChartConstraints con2) => con1.minVal < con2.maxVal))),
 //        assert(constraints.any((KpiChartConstraints con1) => constraints.any((KpiChartConstraints con2) => con1.maxVal > con2.minVal)));
@@ -20,7 +20,7 @@ class StackedHistoryChartSettings {
   ///
   /// If we find constraint in list what intersects with another constrain we change second confused value by first.
   /// In case described above we change maxVal of the constraint2 to minVal of the constraint1 and it will be 20.
-  static List<StackedHistoryChartConstraints> solveIntersections (List<StackedHistoryChartConstraints> constraints) {
+  static List<StackedHistoryChartConstraints>? solveIntersections (List<StackedHistoryChartConstraints>? constraints) {
     if (constraints == null) return null;
 
     List<StackedHistoryChartConstraints> result = List.from(constraints);

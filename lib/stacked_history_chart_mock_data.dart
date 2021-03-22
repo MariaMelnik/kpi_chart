@@ -31,7 +31,8 @@ class StackedHistoryChartMockData {
 
 
   static List<StackedHistoryChartConstraints> constraints = [
-    StackedHistoryChartConstraints(dis: "30-50", minVal:30.0, maxVal: 50, color: Color(0xff0097a7)),
+    StackedHistoryChartConstraints(dis: "30-40", minVal:30.0, maxVal: 40, color: Color(0xff0097a7)),
+    StackedHistoryChartConstraints(dis: "40-50", minVal:40.0, maxVal: 50, color: Color(0xFFFFF176)),
     StackedHistoryChartConstraints(dis: "50-60", minVal: 50, maxVal: 60, color: Color(0xff43a047)),
     StackedHistoryChartConstraints(dis: "65-77", minVal: 65, maxVal: 77, color: Color(0xffc2185b)),
   ];
@@ -40,7 +41,7 @@ class StackedHistoryChartMockData {
 //    StackedHistoryChartConstraints(dis: "max: 13", maxVal: 13.1, color: Colors.green),
 //    StackedHistoryChartConstraints(dis: "18-30", minVal: 18, maxVal: 30, color: Colors.yellow),
 //    StackedHistoryChartConstraints(dis: "25-60", minVal: 25, maxVal: 60, color: Colors.purple),
-////    KpiChartConstraints(dis: "27-29", minVal: 27, maxVal: 29, color: Colors.black),
+// //    KpiChartConstraints(dis: "27-29", minVal: 27, maxVal: 29, color: Colors.black),
 //    StackedHistoryChartConstraints(dis: "58-90", minVal: 58, maxVal: 90, color: Colors.blue),
 //    StackedHistoryChartConstraints(dis: "min: 93", minVal: 93, color: Colors.red),
 //  ];
